@@ -21,9 +21,39 @@
     "commands": [
       {
         "command": "nextComponentPreviewer.preview",
-        "title": "Next.JS Preview : Preview Component"
+        "title": "NextView : Preview Component"
+      },
+      {
+        "command": "nextComponentPreviewer.open",
+        "title": "NextView : Preview Component File"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+          "command": "nextComponentPreviewer.preview",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+          "command": "nextComponentPreviewer.open",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+          "command": "nextComponentPreviewer.preview",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceLangId == javascriptreact || resourceLangId == typescriptreact",
+          "command": "nextComponentPreviewer.open",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
